@@ -11,8 +11,11 @@ const EnquriyRouts = require('./App/routes/web/EnquiryRouts')
 
 let app = express()
 app.use(express.json())
-app.use(cors())
-
+app.use(cors({
+  origin: 'https://event-full-stack-thp4.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  credentials: true, // if you're using cookies or auth headers
+}));
 app.use("/web/api/run",projectRoutes)
 
 
