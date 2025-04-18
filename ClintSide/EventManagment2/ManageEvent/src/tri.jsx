@@ -96,11 +96,11 @@ export default function Dashboard() {
             {role=="attendee"&&token?<Link to="/Booking" className="flex items-center space-x-3 cursor-pointer hover:text-gray-300" ><NavItem icon={<Calendar size={18}/>} label="Events" /></Link>
              :""
             }
-            {role=="attendee"&&token?<Link to="/Booking/myBooing" className="flex items-center space-x-3 cursor-pointer hover:text-gray-300" ><NavItem icon={<Book size={18} />} label="My Booking" /></Link>:''}
+            {role=="attendee"&&token?<Link to="/Booking/myBooing" className="flex items-center space-x-3 cursor-pointer hover:text-gray-300" ><NavItem icon={<Book size={18} />} label="My Booking" /></Link>:<Link to="/eventCreate" className="flex items-center space-x-3 cursor-pointer hover:text-gray-300" ><NavItem icon={<Calendar size={18}/>} label="Create Event" /></Link>}
           
-           {role=="organiser"?<Link to="/eventCreate" className="flex items-center space-x-3 cursor-pointer hover:text-gray-300" ><NavItem icon={<Calendar size={18}/>} label="Create Event" /></Link>
+{/*            {role=="organiser"?<Link to="/eventCreate" className="flex items-center space-x-3 cursor-pointer hover:text-gray-300" ><NavItem icon={<Calendar size={18}/>} label="Create Event" /></Link>
            :""}
-           
+            */}
     
 
             {/* <NavItem icon={<PieChart size={18} />} label="Investments" /> */}
