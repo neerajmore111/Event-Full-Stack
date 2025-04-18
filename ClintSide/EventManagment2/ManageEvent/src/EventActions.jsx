@@ -71,7 +71,7 @@ export default function EventDashboard() {
 let getMyEvents = async () => {
   try {
     const token = localStorage.getItem("token");
-    const res = await axios.get(`http://localhost:8000/web/api/run/readEvent/${user?.id}`, {
+    const res = await axios.get(`https://event-full-stack.vercel.app/web/api/run/readEvent/${user?.id}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -98,7 +98,7 @@ let getMyEvents = async () => {
     if(formdata._id){
        try{
 
-         let res = await axios.put(`http://localhost:8000/web/api/run/update/${formdata._id}`,formdata,
+         let res = await axios.put(`https://event-full-stack.vercel.app/web/api/run/update/${formdata._id}`,formdata,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -204,7 +204,7 @@ let getMyEvents = async () => {
      
     try {
       const token2 = localStorage.getItem('token');
-      const res = await axios.delete(`http://localhost:8000/web/api/run/deleteEvent/${id}`, {
+      const res = await axios.delete(`https://event-full-stack.vercel.app/web/api/run/deleteEvent/${id}`, {
         headers: {
           Authorization: `Bearer ${token2}`,
         },
@@ -236,7 +236,7 @@ let getMyEvents = async () => {
     console.log(id)
     try {
       
-      const res = await axios.get(`http://localhost:8000/web/api/run/singleEvent/${id}`)
+      const res = await axios.get(`https://event-full-stack.vercel.app/web/api/run/singleEvent/${id}`)
       
       if(res){
         setformdata(res.data)
