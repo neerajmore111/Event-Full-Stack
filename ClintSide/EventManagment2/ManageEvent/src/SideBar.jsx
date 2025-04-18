@@ -42,7 +42,7 @@ export default function BiohackingPage() {
     const fetchEvents = async () => {
       try {
         const token2 = localStorage.getItem("token");
-        const res = await axios.get("https://event-full-stack.vercel.app/web/api/run/wiveBooking", {
+        const res = await axios.get("https://server-5rds.onrender.com/web/api/run/wiveBooking", {
           headers: {
             Authorization: `Bearer ${token2}`,
           },
