@@ -19,7 +19,7 @@ app.use(cors({
 app.use("/web/api/run",projectRoutes)
 
 
-mongoose.connect("mongodb+srv://neerajmore9:ZBtILKM0tGT5UR57@eventm.6ydue7x.mongodb.net//UserEnquiry").then(()=>{
+mongoose.connect("mongodb+srv://neerajmore9:ZBtILKM0tGT5UR57@eventm.6ydue7x.mongodb.net/UserEnquiry").then(()=>{
     console.log('mongo db is connected')
     app.listen(8000,()=>{
         console.log("Server is running ")
