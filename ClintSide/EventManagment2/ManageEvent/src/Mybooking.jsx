@@ -12,7 +12,7 @@ export default function Mybooking() {
    const fetchBooking = async () => {
     try {
       const token2 = localStorage.getItem("token");
-      const res = await axios.get("https://event-full-stack.vercel.app/web/api/run/BookingHistory", {
+      const res = await axios.get("https://server-5rds.onrender.com/web/api/run/BookingHistory", {
         headers: {
           Authorization: `Bearer ${token2}`,
         },
@@ -37,7 +37,7 @@ export default function Mybooking() {
       console.log(id)
       try {
         const token2 = localStorage.getItem('token');
-        const res = await axios.delete(`https://event-full-stack.vercel.app/web/api/run/cancleBooking/${id}`, {
+        const res = await axios.delete(`https://server-5rds.onrender.com/web/api/run/cancleBooking/${id}`, {
           headers: {
             Authorization: `Bearer ${token2}`,
           },
