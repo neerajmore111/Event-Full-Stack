@@ -33,7 +33,7 @@ export default function RegisTration() {
         // if (form.password !== form.confirmPassword) return alert("Passwords do not match");
         console.log(e)
         try {
-           let res = await axios.post("http://localhost:8000/web/api/run/userRegister", formdata)
+           let res = await axios.post("https://event-full-stack.vercel.app/web/api/run/userRegister", formdata)
             
             setformdata({
                 name: '',
